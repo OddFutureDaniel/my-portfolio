@@ -2,9 +2,15 @@
     <v-container class="homeContainer">
         <nav class="nav__left">
             <div class="nav__left__items">
-                <div class="nav__left__item">{{cv}}</div>
-                <div class="nav__left__item">{{linkedIn}}</div>
-                <div class="nav__left__item">{{github}}</div>
+                <div class="nav__left__item">
+                    <a class="nlil" href="">{{cv}}</a>
+                </div>
+                <div class="nav__left__item">
+                    <a class="nlil" href="">{{linkedIn}}</a>
+                </div>
+                <div class="nav__left__item">
+                    <a class="nlil" href="">{{github}}</a>
+                </div>
                 <div class="divider">
                     <v-divider class="test" vertical="true" role="presentation"></v-divider>
                 </div>
@@ -12,7 +18,6 @@
             <div class="nav__right__items">
                 <div class="nav__right__item">{{text}}</div>
             </div>
-
         </nav>
         <div class="main__section">
             <div class="section__left">
@@ -31,16 +36,14 @@
                     <div class="nav__links">
                         <a class="nav__link" href="">CONTACT</a>
                     </div>
-
                 </div>
-
             </div>
         </div>
-
     </v-container>
 </template>
 
 <script>
+
 export default {
     name: 'HomeView',
 
@@ -67,7 +70,6 @@ export default {
     background-color: rgb(234, 219, 208);
 }
 
-
 .nav__left {
     position: fixed;
     width: 6vw;
@@ -79,14 +81,32 @@ export default {
     min-width: 65px;
 }
 
-
+.nav__left__items {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .nav__left__item {
-    margin-bottom: 40px;
-    padding-right: 15px;
-    padding-left: 20px;
+    height: 36px;
+    padding-right: 30px;
+    padding-left: 22px;
+    display: flex;
+    align-items: center;
+}
 
+.nlil {
+    text-decoration: none;
+    color: black;
     transform: rotate(-90deg);
+}
+
+.nlil:hover {
+    color: rgb(82, 183, 189);
+    transform: rotate(0deg);
+    transform-origin: center;
 }
 
 .test {
@@ -94,8 +114,6 @@ export default {
     height: 113px;
     max-width: 100px;
     border-width: 0.5px;
-    /* transform: rotate(-90deg); */
-    /* margin-top: 1px; */
     margin-left: 32px;
 }
 
@@ -151,11 +169,11 @@ export default {
     font-family: "Extatica";
     font-size: 12em;
     text-decoration: none;
-    color:  rgb(63, 33, 1);
+    color: rgb(63, 33, 1);
     line-height: 0.95em;
 }
 
-.nav__link:hover{
+.nav__link:hover {
     color: rgb(82, 183, 189);
 }
 
@@ -164,7 +182,5 @@ export default {
     src: local("Extatica"), url("../fonts/Extatica/Extatica-Medium.otf");
 }
 
-@media screen {
-    
-}
+@media screen {}
 </style>
