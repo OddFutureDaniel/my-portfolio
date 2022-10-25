@@ -163,4 +163,8 @@ export default {
     font-family: "Extatica";
     src: local("Extatica"), url("../fonts/Extatica/Extatica-Medium.otf");
 }
+
+@media screen {
+    
+}
 </style>
