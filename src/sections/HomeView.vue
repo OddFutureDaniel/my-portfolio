@@ -21,7 +21,7 @@
         </nav>
         <div class="main__section">
             <div class="section__left">
-                <p>{{name}}</p>
+                <p>{{myName}}</p>
                 <v-divider width="80%" style="border-color:black"></v-divider>
                 <p>{{description}}</p>
             </div>
@@ -47,15 +47,17 @@
 export default {
     name: 'HomeView',
 
-    data: () => ({
-        title: "Hey bro",
-        cv: "CV",
-        linkedIn: "LI",
-        github: "GH",
-        text: "Designed & created by Daniel Rogerson",
-        name: "Daniel Rogerson",
-        description: "Frontend Web Developer & Designer",
-    })
+    data() {
+        return {
+            title: "Hey bro",
+            cv: "CV",
+            linkedIn: "LI",
+            github: "GH",
+            text: "Designed & created by Daniel Rogerson",
+            myName: "Daniel Rogerson",
+            description: "Frontend Web Developer & Designer",
+        }
+    }
 }
 //rgb(82, 183, 189) tiffany blue - matches fuschia
 </script>
@@ -182,5 +184,47 @@ export default {
     src: local("Extatica"), url("../fonts/Extatica/Extatica-Medium.otf");
 }
 
-@media screen {}
+@media screen and (max-width: 1200px) {
+    .nav__left {
+        height: 6vh;
+        width: 100vw;
+        margin-top: 0px;
+        flex-direction: row;
+    }
+
+    .nav__left__items {
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .nav__left__item {
+        /* TODO */ 
+    }
+
+    .nlil {
+        transform: rotate(0deg);
+    }
+
+    .nav__right__item {
+        transform: rotate(0deg);
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .divider {
+        transform: rotate(90deg);
+        height: 113px;
+        max-width: 100px;
+        border-width: 0.5px;
+        padding-top: 20px;
+    }
+
+    .test{
+        /* TODO */ 
+    }
+}
 </style>
