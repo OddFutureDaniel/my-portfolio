@@ -1,5 +1,10 @@
 # my-portfolio
 
+Web development portfolio website made with Vue, Vuetify, NodeJS.
+
+Focusing on large typography, aesthetic design, responsiveness, 
+
+
 ## Project setup
 ```
 npm install
@@ -22,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+Website inspiration from https://www.lauren-waller.com/
